@@ -1,0 +1,137 @@
+/* BANNERCSS */
+.bannerquote {
+  background: linear-gradient(#ffffff5b, #ffffff5b),
+    url("../../assets/bannerbg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+  animation: bannerbgScroll 30s linear infinite;
+  border: 1px solid #b41f77;
+}
+
+.bannerimg {
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  margin: 2rem auto 0 auto;
+  display: block;
+  object-fit: fill;
+}
+
+.bannerimg img {
+  border: 1px solid #b41f77;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  object-fit: fill;
+}
+
+/*SIMPLE ANIMATIONS*/
+@keyframes bannerbgScroll {
+  0% {
+    background-position: center top;
+  }
+  50% {
+    background-position: center bottom;
+  }
+  100% {
+    background-position: center top;
+  }
+}
+
+.bannertext {
+  color: #b41f77;
+  width: 80%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.bannertext h2 {
+  font-family: "feeling Passionate", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+.bannertext p {
+  font-family: "Merel Regular", sans-serif;
+  font-size: 1rem;
+  text-align: right;
+  margin: 0;
+  width: 90%;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .bannerquote {
+    height: 15rem;
+  }
+
+  .bannerimg {
+    width: 70px;
+    height: 70px;
+    margin: 1.5rem auto;
+  }
+
+  .bannerimg img {
+    margin: 1rem 0;
+    width: 70px;
+    height: 70px;
+  }
+
+  .bannertext {
+    width: 80%;
+    height: auto;
+  }
+
+  .bannertext h2 {
+    font-size: 1.5rem;
+  }
+
+  .bannertext p {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .bannerquote {
+    height: 12rem;
+  }
+
+  .bannerimg {
+    width: 60px;
+    height: 60px;
+    margin: 1rem auto;
+  }
+
+  .bannerimg img {
+    margin: 0.5rem 0;
+    width: 60px;
+    height: 60px;
+  }
+
+  .bannertext {
+    width: 90%;
+    height: auto;
+    padding: 0 1rem;
+  }
+
+  .bannertext h2 {
+    font-size: 1.2rem;
+  }
+
+  .bannertext p {
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+  }
+}

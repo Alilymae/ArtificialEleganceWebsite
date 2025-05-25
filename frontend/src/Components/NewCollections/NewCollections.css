@@ -1,0 +1,67 @@
+.newcollections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0 15rem 0;
+}
+
+.newcollections h1 {
+  font-size: 2rem;
+  font-family: "feeling Passionate", sans-serif;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 400;
+}
+
+.newcollections hr {
+  width: 200px;
+  border: 1px solid #b41f77;
+}
+
+.collections {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .newcollections {
+    height: auto;
+  }
+
+  .newcollections h1 {
+    font-size: 1.7rem;
+  }
+
+  .newcollections hr {
+    width: 150px;
+  }
+
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .newcollections {
+    height: auto;
+  }
+
+  .newcollections h1 {
+    font-size: 1.4rem;
+  }
+
+  .newcollections hr {
+    width: 120px;
+  }
+
+  .collections {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

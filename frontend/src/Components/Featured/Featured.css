@@ -1,0 +1,63 @@
+.featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.featured h1 {
+  font-size: 2rem;
+  font-family: "feeling Passionate", sans-serif;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 400;
+}
+
+.featured hr {
+  width: 200px;
+  border: 1px solid #b41f77;
+}
+
+.featureditem {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .featured {
+    height: auto;
+  }
+  
+  .featured h1 {
+    font-size: 1.7rem;
+  }
+
+  .featured hr {
+    width: 150px;
+  }
+
+  .featureditem {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .featured {
+    height: auto;
+  }
+  .featured h1 {
+    font-size: 1.4rem;
+  }
+
+  .featured hr {
+    width: 120px;
+  }
+
+  .featureditem {
+    flex-direction: column; /* stack items vertically */
+    gap: 1rem;
+  }
+}

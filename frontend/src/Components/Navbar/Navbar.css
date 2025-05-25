@@ -1,0 +1,135 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  top: 0;
+  left: 0;
+  position: fixed;
+  font-family: "Merel Regular", serif;
+  font-weight: 500;
+  font-style: normal;
+  z-index: 999;
+}
+
+/* Logo */
+nav h1 {
+  font-family: "Feeling Passionate", sans-serif;
+  color: #b41f77;
+  font-size: 1.5rem;
+}
+
+/* Nav List */
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* Nav Links */
+nav ul li a {
+  position: relative;
+  font-family: "Merel Regular", sans-serif;
+  font-size: 1rem;
+  color: #b41f77;
+  cursor: pointer;
+  padding-bottom: 0.2rem;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #4d0d32;
+}
+
+.auth-btn {
+  all: unset; 
+  font-family: "Merel Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b41f77;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.auth-btn:hover {
+  background-color: #b41f77;
+  color: white;
+}
+
+/* Scroll background */
+.blacknav {
+  background-color: #fbe7f3;
+  transition: 0.5s;
+  border: 1px solid #b41f77;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    max-width: 100vw;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+  nav h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    position: fixed;
+  }
+
+  nav h1 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    width: 100%;
+    margin: 0.3rem 0 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    font-size: 0.75rem;
+    padding: 0.2rem;
+  }
+}

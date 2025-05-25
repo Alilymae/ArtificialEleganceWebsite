@@ -1,0 +1,128 @@
+.testimonial-section {
+  background-color: #fdfdfd;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #b41f77;
+  font-family: "feeling Passionate", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 2rem;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: #FBE7F3;
+  padding: 1.5rem;
+  box-shadow: 2px 4px 10px #b41f77;
+  opacity: 0;
+  border: 1px solid #b41f77;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+.testimonial-card:nth-child(1) { --i: 1; }
+.testimonial-card:nth-child(2) { --i: 2; }
+.testimonial-card:nth-child(3) { --i: 3; }
+.testimonial-card:nth-child(4) { --i: 4; }
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 1rem;
+  font-family: "Merel Regular", sans-serif;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  font-family: "Merel Regular", sans-serif;
+  color: #b41f77;
+}
+
+.stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Add this for better responsiveness */
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+
+  .stars {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .testimonial-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 0.8rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.85rem;
+  }
+
+  .stars {
+    font-size: 0.9rem;
+  }
+}
