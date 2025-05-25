@@ -1,0 +1,91 @@
+.addproducts {
+  max-width: 600px;
+  margin: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #b41f77;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 20px;
+  font-family: "Merel", sans-serif;
+}
+
+.addproductfield {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.addproductfield input,
+.addproductfield select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #b41f77;
+}
+
+.addproductfield input img {
+    width: 200px;
+}
+
+.addproductprice {
+  display: flex;
+  gap: 20px;
+}
+
+.addproductbtn {
+  padding: 12px;
+  background-color: #b41f77;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.addproductbtn:hover {
+  background-color: #95145f;
+}
+
+.addthumbnail {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  cursor: pointer;
+  border: 2px dashed #b41f77;
+  border-radius: 8px;
+  padding: 10px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .addproductprice {
+    flex-direction: column;
+  }
+
+  .addproducts {
+    padding: 15px;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  .addproducts {
+    padding: 10px;
+  }
+
+  .addproductbtn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .addproductfield input,
+  .addproductfield select {
+    font-size: 14px;
+  }
+
+  .addthumbnail {
+    max-width: 100%;
+  }
+}

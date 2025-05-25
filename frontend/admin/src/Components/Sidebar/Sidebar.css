@@ -1,0 +1,55 @@
+/* Default (Desktop) */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0 20px;
+  gap: 20px;
+  width: 100%;
+  max-width: 250px;
+  height: 100vh;
+  background-color: #FBE7F3;
+  border: 1px solid #b41f77;
+  color: #fff;
+}
+
+.sidebaritem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #b41f77;
+  padding: 10px;
+  background-color: white;
+  margin: 0 20px;
+  font-family: 'Merel Regular', sans-serif;
+  color: black;
+}
+
+.sidebaritem:hover {
+  background-color: #faa8d9;
+  border-color: #faa8d9;
+  color: #b41f77;
+}
+
+/* Responsive for Tablet & Phone */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: row;
+    height: auto;
+    max-width: 100%;
+    padding: 10px;
+    border-right: none;
+    border-bottom: 1px solid #b41f77;
+    overflow-x: auto;
+    justify-content: space-around;
+  }
+
+  .sidebaritem {
+    flex: 1 0 auto;
+    margin: 0;
+    padding: 10px 8px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,104 @@
+/* Listproducts.css */
+.listproducts {     
+  width: 100%;
+      
+  padding: 20px 30px;
+  background-color: #fffafc;
+  color: #333;
+  box-sizing: border-box;
+  min-height: 300px;   
+  box-shadow: 0 0 10px rgba(172, 42, 117, 0.247);
+  display: flex;
+  flex-direction: column;
+}
+
+.listproducts h1 {
+  font-size: 2rem;
+  color: #b41f77;
+  font-weight: 500;
+  font-family: "Feeling Passionate", cursive;
+  text-align: center;     
+  margin-bottom: 20px;
+}
+
+.listproducts2 {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+  font-weight: 600;
+  border-bottom: 2px solid #b41f77;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  width: 100%;     
+    gap: 10px;      
+}
+
+.listproducts-allproducts {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 500px; 
+  justify-content: flex-start;
+  align-items: stretch; 
+  width: 100%;       
+}
+
+.listproducts-format-main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
+}
+
+.listproduct-product-icon {
+  width: auto;
+  height: 80px;
+  object-fit: contain;
+  border: 1px solid #b41f77;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments (keep your existing ones) */
+@media screen and (max-width: 768px) {
+  .listproducts {
+    max-width: 90%;
+    padding: 15px 20px;
+  }
+  .listproducts2,
+  .listproducts-format-main {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    font-size: 14px;
+  }
+  .listproducts2 p:nth-child(n + 5),
+  .listproducts-format-main p:nth-child(n + 5),
+  .listproducts-format-main img.removeproduct {
+    display: none;
+  }
+  .listproduct-product-icon {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .listproducts {
+    padding: 10px 15px;
+  }
+  .listproducts h1 {
+    font-size: 1.5rem;
+  }
+  .listproducts2,
+  .listproducts-format-main {
+    grid-template-columns: 1fr 2fr 1fr;
+    font-size: 12px;
+  }
+  .listproducts2 p:nth-child(n + 4),
+  .listproducts-format-main p:nth-child(n + 4),
+  .listproducts-format-main img.removeproduct {
+    display: none;
+  }
+  .listproduct-product-icon {
+    height: 35px;
+  }
+}
