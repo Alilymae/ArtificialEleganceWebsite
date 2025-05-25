@@ -1,0 +1,158 @@
+.services-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1000px;
+  height: 70vh;
+  margin: auto;
+}
+
+.servicescard {
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  min-width: 150px;
+  max-width: 300px;
+  height: 400px;
+  filter: grayscale(100%) brightness(0.5);
+}
+
+.servicescard.active {
+  flex: 2;
+  filter: none;
+}
+
+.servicescard .overlay2 {
+  background: rgba(0, 0, 0, 0.548);
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: background 0.3s ease;
+}
+
+.servicescard h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "feeling Passionate", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.servicescard p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  font-family: "Merel Regular", serif;
+  color: #ffffff;
+}
+
+.servicescard .exinfo {
+  font-family: "Merel Regular", serif;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.servicescard button {
+  margin-top: 1rem;
+  background: rgb(255, 255, 255);
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #b41f77;
+  font-family: "Merel Regular", serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.servicescard button:hover {
+  background: #b41f76b4;
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .services-container {
+    max-width: 90vw;
+    height: auto;
+    gap: 0.75rem;
+  }
+
+  .servicescard {
+    max-width: 280px;
+    height: 350px;
+  }
+
+  .servicescard.active {
+    flex: 1.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .servicescard {
+    min-width: 200px;
+    max-width: 250px;
+    height: 320px;
+  }
+
+  .servicescard.active {
+    flex: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding: 0.5rem;
+    height: auto;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .servicescard {
+    min-width: 180px;
+    max-width: 220px;
+    height: 280px;
+  }
+
+  .servicescard.active {
+    flex: 1.5;
+  }
+
+  .servicescard h2 {
+    font-size: 1.2rem;
+  }
+
+  .servicescard p {
+    font-size: 0.85rem;
+  }
+
+  .servicescard button {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

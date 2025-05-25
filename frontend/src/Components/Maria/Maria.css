@@ -1,0 +1,196 @@
+.mariamaincon {
+  margin: 0;
+  background: #ffffff;
+  height: 100vh;
+  border: 1px solid #b41f77;
+  display: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+
+.mariabg {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: url("../../assets/ae.png") no-repeat center center/cover;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #b41f77;
+}
+
+.flexcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.mpic {
+  flex: 0 0 350px;
+}
+
+.mpic img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid #b41f77;
+}
+
+.mcontent {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#mariahr {
+  border: none;
+  border-top: 1px solid #b41f77;
+  width: 50%;
+  margin: 10px auto;
+}
+
+.mcontent h1 {
+  margin-bottom: 10px;
+  color: #b41f77;
+  font-family: "feeling Passionate", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  width: 80%;
+}
+
+.mcontent p {
+  font-family: "Merel Regular", sans-serif;
+  line-height: 1.6;
+  margin: 1rem 0 2rem 0;
+  width: 80%;
+  text-align: center;
+}
+
+.mcontent img {
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+}
+
+#rm {
+  position: relative;
+  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: "Merel Regular", sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+#rm::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 8px;
+  width: 0%;
+  height: 1px;
+  background-color: #b41f77;
+  transition: width 0.3s ease;
+}
+
+#rm:hover::after {
+  width: calc(100% - 40px);
+}
+
+.signature {
+  position: absolute;
+  bottom: -30px;
+  right: 30px;
+  width: 150px;
+  opacity: 0.9;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.signature img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .mariamaincon {
+    height: auto; /* let it grow with content */
+  }
+
+  .mariabg {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .flexcon {
+    flex-direction: column;  /* stack image and content */
+    gap: 1.5rem;
+  }
+
+  .mpic {
+    flex: 0 0 80%; /* wider on smaller screens */
+    max-width: 350px;
+  }
+
+  .mcontent {
+    width: 100%; /* full width */
+    text-align: center;
+  }
+
+  .mcontent h1,
+  .mcontent p {
+    width: 90%; /* reduce width for readability */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mcontent img {
+    width: 60%;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .flexcon {
+    gap: 1rem;
+  }
+
+  .mpic {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mcontent {
+    width: 100%;
+  }
+
+  .mcontent h1,
+  .mcontent p {
+    width: 100%;
+  }
+
+  .mcontent img {
+    width: 80%;
+  }
+
+  .signature {
+    width: 120px;
+    bottom: -20px;
+  }
+}

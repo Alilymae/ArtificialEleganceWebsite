@@ -1,0 +1,87 @@
+.item {
+  width: 250px;
+  box-sizing: border-box; 
+  transition: transform 0.6s ease;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  border: 1px solid #b41f77;
+  display: block; 
+}
+
+.item p {
+  margin: 6px 0;
+  font-family: "Merel Regular", sans-serif;
+  font-size: 1.1rem;
+}
+
+.itemprices {
+  display: flex;
+  gap: 20px;
+}
+
+.items-price-new {
+  color: #374151;
+  font-size: 1rem;
+  font-family: "Merel Regular", sans-serif;
+  font-weight: 600;
+}
+
+.items-price-old {
+  color: #8c8c8c;
+  font-size: 1rem;
+  font-family: "Merel Regular", sans-serif;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .item {
+    width: 50vw; 
+    max-width: 300px;
+  }
+
+  .item p {
+    font-size: 1rem;
+  }
+
+  .items-price-new,
+  .items-price-old {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .item {
+    width: 100vw;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .item p {
+    font-size: 0.95rem;
+  }
+
+  .items-price-new,
+  .items-price-old {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,159 @@
+.popmaincon {
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../../assets/popbg.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #b41f77;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.poptitle {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "feeling Passionate", sans-serif;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+#popline {
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  margin-bottom: 2rem;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  width: 660px; 
+}
+
+.slides-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.popslides {
+  flex: 0 0 20rem;
+  height: 23rem;
+  scroll-snap-align: center;
+  background: #ffffff;
+  border: 2px solid #b41f77;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, opacity 0.3s;
+  position: relative;
+  margin-right: 1rem; /* spacing between slides */
+}
+
+.popimg img {
+  width: 300px;
+  height: 222px;
+  object-fit: cover;
+}
+
+.popcontent {
+  padding: 1rem;
+  font-family: "Merel Regular", sans-serif;
+  text-align: center;
+}
+
+.popheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.popheader h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.poptext {
+  font-size: 1rem;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.popbtn button {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: 2px solid #b41f77;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: "Merel Regular", sans-serif;
+}
+
+.popbtn button a {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  margin-top: 1rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: "Merel Regular", sans-serif;
+}
+
+.popbtn button a:hover {
+  background-color: #b41f77;
+  color: white;
+}
+
+.navbtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.navbtn-left {
+  left: -50px;
+}
+
+.navbtn-right {
+  right: -50px;
+}
+
+.paginationbullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: lightgray;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bullet.active {
+  background-color: #b41f77;
+}

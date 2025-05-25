@@ -1,0 +1,133 @@
+.shopmaincon {
+  width: 100%;
+  height: 100vh;
+  background-color: #fbe7f3;
+  border: 1px solid #b41f77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopbg {
+  width: 60%;
+  height: 100vh;
+  border: 1px solid #b41f77;
+}
+
+.shopbg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shopheadertext {
+  width: 40%;
+  height: 100vh;
+  border: 1px solid #b41f77;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopheadertext h1 {
+  font-size: 3rem;
+  font-family: "feeling Passionate", sans-serif;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.shopheadertext p {
+  width: 70%;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Merel Regular", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.shopheadertext button {
+  background-color: transparent;
+  color: #b41f77;
+  border: 2px solid #b41f77;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: "Merel Regular", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.shopheadertext button:hover {
+  background-color: #b41f77;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .shopmaincon {
+    flex-direction: column;
+    height: auto; /* Let height adjust */
+    padding: 2rem 1rem;
+  }
+
+  .shopbg,
+  .shopheadertext {
+    width: 100%;
+    height: 300px; /* Fixed height for image and header */
+    border: 1px solid #b41f77;
+  }
+
+  .shopheadertext {
+    padding: 15px;
+  }
+
+  .shopheadertext h1 {
+    font-size: 2.2rem;
+  }
+
+  .shopheadertext p {
+    width: 90%;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .shopheadertext button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .shopmaincon {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
+
+  .shopbg,
+  .shopheadertext {
+    width: 100%;
+    height: 250px; /* smaller height */
+    border: 1px solid #b41f77;
+  }
+
+  .shopheadertext h1 {
+    font-size: 1.5rem;
+  }
+
+  .shopheadertext p {
+    width: 95%;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .shopheadertext button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}

@@ -1,0 +1,112 @@
+.favourites-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.favourites-container h4 {
+  font-family: "Merel Regular", sans-serif;
+}
+
+.favourites-container h1 {
+  font-family: "Feeling Passionate", sans-serif;
+  font-weight: 400;
+  color: #b41f77;
+}
+
+.favourites-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 250px 250px;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+/*CUSTOM SIZES AND POSITION */
+.card-large {
+  grid-column: 1 / 3;   
+  grid-row: 1 / 2;      
+}
+
+.card-small {
+  grid-column: 3 / 5;   
+  grid-row: 1 / 2;       
+}
+
+.card-vertical {
+  grid-column: 1 / 2;   
+  grid-row: 2 / 3;     
+}
+
+.card-wide {
+  grid-column: 2 / 5;   
+  grid-row: 2 / 3;     
+}
+
+/* Tablet view (≤768px) */
+@media (max-width: 768px) {
+  .favourites-container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .favourites-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Re-map spans for 2-column layout */
+  .card-large {
+    grid-column: 1 / span 2;  /* full width */
+    grid-row: 1;
+  }
+  .card-small {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+  .card-vertical {
+    grid-column: 2 / span 1;
+    grid-row: 2;
+  }
+  .card-wide {
+    grid-column: 1 / span 2;  /* full width */
+    grid-row: 3;
+  }
+}
+
+/* Mobile view (≤480px) */
+@media (max-width: 480px) {
+  .favourites-container {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .favourites-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* All cards full-width in single column */
+  .favourites-grid .card {
+    grid-column: 1 / span 1 !important;
+    grid-row: auto !important;
+  }
+}
