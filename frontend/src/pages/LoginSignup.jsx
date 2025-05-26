@@ -20,7 +20,7 @@ const LoginSignup = () => {
   const login = async () => {
     console.log("Login done", formData);
     let responseData;
-    await fetch("https://backend-lvd9.onrender.comlogin", {
+    await fetch("https://backend-lvd9.onrender.com/login", {
       method: "POST",
       headers: {
         Accept: "application/form-data",
