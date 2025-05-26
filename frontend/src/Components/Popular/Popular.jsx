@@ -25,17 +25,18 @@ const titles = [
 ];
 
 const slideWidth = 320; // width in px of each slide (20rem ~ 320px)
-
+const maxIndex = slides.length - Math.floor(1000 / slideWidth); // 1000 = container width
 const Popular = () => {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % slides.length);
-  };
+  setCurrent((prev) => Math.min(prev + 1, maxIndex));
+};
 
-  const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+const prevSlide = () => {
+  setCurrent((prev) => Math.max(prev - 1, 0));
+};
+
 
   return (
     <section id="trending">

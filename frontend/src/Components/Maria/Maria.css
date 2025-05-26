@@ -13,6 +13,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
+  z-index: 0;
   width: 100%;
   background: url("../../assets/ae.png") no-repeat center center/cover;
   padding: 20px;
@@ -25,10 +26,28 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  position: relative;
+  z-index: 2; /* Ensure it's on a specific layer */
+}
+
+.signature {
+  position: absolute;
+  bottom: -30px;
+  right: 30px;
+  width: 150px;
+  opacity: 0.95;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 999; /* Force on top */
+  pointer-events: none;
 }
 
 .mpic {
   flex: 0 0 350px;
+  position: relative;
+  z-index: 2; /* higher than the background */
 }
 
 .mpic img {
