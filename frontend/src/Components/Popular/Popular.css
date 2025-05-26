@@ -29,15 +29,15 @@
 }
 
 .slider-container {
-   width: 420px; /* match slideWidth */
-  overflow: hidden;
+  width: 960px;
   position: relative;
+  overflow: hidden;
 }
 
 .slides-wrapper {
   display: flex;
+  width: 170rem;
   transition: transform 0.3s ease;
-  will-change: transform;
 }
 
 .popslides {
@@ -52,7 +52,6 @@
   padding: 0.5rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s, opacity 0.3s;
-  position: relative;
   margin-right: 1rem; /* spacing between slides */
 }
 
@@ -128,11 +127,11 @@
 }
 
 .navbtn-left {
-  left: 10px; /* inside slider container */
+  left: -10px;
 }
 
 .navbtn-right {
-  right: 10px; /* inside slider container */
+  right: -10px;
 }
 
 .paginationbullets {
