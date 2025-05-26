@@ -9,7 +9,7 @@ const Listproducts = () => {
   const [allproducts, setAllproducts] = useState([]);
 
   const fetchInfo = async () => {
-    await fetch("http://localhost:4000/allproducts")
+    await fetch('https://backend-lvd9.onrender.com/allproducts')
       .then((res) => res.json())
       .then((data) => {
         setAllproducts(data);
