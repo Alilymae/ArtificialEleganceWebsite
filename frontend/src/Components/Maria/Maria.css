@@ -1,7 +1,7 @@
 .mariamaincon {
   margin: 0;
   background: #ffffff;
-  height: 100vh;
+  height: 90vh;
   border: 1px solid #b41f77;
   display: flex-start;
   justify-content: center;
@@ -28,33 +28,6 @@
   padding: 10px;
   position: relative;
   z-index: 2; /* Ensure it's on a specific layer */
-}
-
-.signature {
-  position: absolute;
-  bottom: -30px;
-  right: 30px;
-  width: 150px;
-  opacity: 0.95;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 999; /* Force on top */
-  pointer-events: none;
-}
-
-.mpic {
-  flex: 0 0 350px;
-  position: relative;
-  z-index: 2; /* higher than the background */
-}
-
-.mpic img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border: 1px solid #b41f77;
 }
 
 .mcontent {
@@ -128,12 +101,13 @@
 }
 
 .signature {
-  position: absolute;
-  bottom: -30px;
+  position: relative;
+  bottom: 27px;
   right: 30px;
   width: 150px;
   opacity: 0.9;
   left: 0;
+  z-index: 2;
   right: 0;
   margin: 0 auto;
   text-align: center;
@@ -143,73 +117,4 @@
   width: 100%;
   height: auto;
   display: block;
-}
-
-
-/* Tablet view */
-@media (max-width: 768px) {
-  .mariamaincon {
-    height: auto; /* let it grow with content */
-  }
-
-  .mariabg {
-    height: auto;
-    padding: 1rem;
-  }
-
-  .flexcon {
-    flex-direction: column;  /* stack image and content */
-    gap: 1.5rem;
-  }
-
-  .mpic {
-    flex: 0 0 80%; /* wider on smaller screens */
-    max-width: 350px;
-  }
-
-  .mcontent {
-    width: 100%; /* full width */
-    text-align: center;
-  }
-
-  .mcontent h1,
-  .mcontent p {
-    width: 90%; /* reduce width for readability */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .mcontent img {
-    width: 60%;
-  }
-}
-
-/* Mobile view */
-@media (max-width: 480px) {
-  .flexcon {
-    gap: 1rem;
-  }
-
-  .mpic {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .mcontent {
-    width: 100%;
-  }
-
-  .mcontent h1,
-  .mcontent p {
-    width: 100%;
-  }
-
-  .mcontent img {
-    width: 80%;
-  }
-
-  .signature {
-    width: 120px;
-    bottom: -20px;
-  }
 }

@@ -32,10 +32,11 @@ const Maria = () => {
               <button id="rm">Read More</button>
             </div>
           </div>
-          <div className="signature">
+        
+        </div>
+        <div className="signature">
             <img src={mm} alt="Maria Montero MM" />
           </div>
-        </div>
       </div>
     </>
   );
