@@ -118,3 +118,79 @@
   height: auto;
   display: block;
 }
+
+@media (max-width: 1024px) {
+  .mcontent {
+    width: 60%;
+  }
+
+  .mcontent img {
+    width: 60%;
+  }
+
+  .mcontent h1 {
+    font-size: 1.7rem;
+  }
+
+  .mcontent p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mcontent {
+    width: 80%;
+  }
+
+  .mcontent img {
+    width: 70%;
+  }
+
+  .mcontent h1 {
+    font-size: 1.5rem;
+  }
+
+  .mcontent p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mariamaincon {
+    height: auto;
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .flexcon {
+    flex-direction: column;
+  }
+
+  .mcontent {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .mcontent img {
+    width: 80%;
+  }
+
+  .mcontent h1 {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .mcontent p {
+    font-size: 0.85rem;
+  }
+
+  #rm {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .signature {
+    width: 120px;
+    bottom: 15px;
+  }
+}
